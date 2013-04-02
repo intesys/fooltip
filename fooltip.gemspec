@@ -19,4 +19,6 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", ">= 3.1.0"
   s.add_dependency "globalize3", ">= 0.3.0"
   s.add_dependency "carrierwave", ">= 0.8.0"
+  s.add_dependency "haml"
+  s.add_dependency "jquery-rails", ">= 1.0.0"
 end

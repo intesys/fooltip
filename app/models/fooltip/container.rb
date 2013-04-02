@@ -1,11 +1,8 @@
 module Fooltip
   class Container < ::ActiveRecord::Base
-    attr_accessible :description, :title
-
-    translates :title, :description, fallbacks_for_empty_translations: true
-
     mount_uploader :image, ImageUploader
-
-    has_many :links
+    translates :title, :description, fallbacks_for_empty_translations: true
+    attr_accessible :description, :title
+    has_many :links, dependent: :destroy
   end
 end

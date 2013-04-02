@@ -1,5 +1,7 @@
 require "globalize3"
 require "carrierwave"
+require "haml"
+require "jquery-rails"
 require "fooltip/engine"
 require "fooltip/active_record"
 
