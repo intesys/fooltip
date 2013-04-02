@@ -27,6 +27,7 @@ end
 group :test do
   gem "rspec-rails"
   gem "spork"
+  gem "factory_girl"
   gem "capybara"
   gem "shoulda-matchers", "= 1.4.2"
   gem "simplecov", require: false

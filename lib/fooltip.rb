@@ -1,11 +1,13 @@
 require "globalize3"
+require "carrierwave"
 require "fooltip/engine"
+require "fooltip/active_record"
 
 module Fooltip
   #include ActiveSupport::Configurable
 
   #config.x = :X
   #config_accessor :x
-
-  #autoload :MyModule, 'fooltip/my_module'
 end
+
+ActiveRecord::Base.extend(Fooltip::ActiveRecord)

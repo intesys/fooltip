@@ -66,6 +66,13 @@ Spork.prefork do
     #     --seed 1234
     config.order = "random"
   end
+
+  FactoryGirl.find_definitions
+
+  CarrierWave.configure do |config|
+    config.storage = :file
+    config.enable_processing = false
+  end
 end
 
 Spork.each_run do
