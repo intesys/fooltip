@@ -39,4 +39,34 @@ ActiveRecord::Schema.define(:version => 20130402091259) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "fooltip_links", :force => true do |t|
+    t.integer  "container_id"
+    t.integer  "popup_id"
+    t.integer  "x"
+    t.integer  "y"
+    t.integer  "popup_direction"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "fooltip_links", ["container_id"], :name => "index_fooltip_links_on_container_id"
+  add_index "fooltip_links", ["popup_id"], :name => "index_fooltip_links_on_popup_id"
+
+  create_table "fooltip_popup_translations", :force => true do |t|
+    t.integer  "fooltip_popup_id"
+    t.string   "locale"
+    t.text     "content"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  add_index "fooltip_popup_translations", ["fooltip_popup_id"], :name => "index_fooltip_popup_translations_on_fooltip_popup_id"
+  add_index "fooltip_popup_translations", ["locale"], :name => "index_fooltip_popup_translations_on_locale"
+
+  create_table "fooltip_popups", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
 end

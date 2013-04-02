@@ -5,5 +5,7 @@ module Fooltip
     translates :title, :description, fallbacks_for_empty_translations: true
 
     mount_uploader :image, ImageUploader
+
+    has_many :links
   end
 end
