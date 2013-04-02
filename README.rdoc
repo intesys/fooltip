@@ -2,11 +2,10 @@
 
 *STATUS*: In development - not ready to be used.
 
-#{<img src="https://travis-ci.org/intesys/fooltip.png?branch=master" alt="Build Status" />}[https://travis-ci.org/intesys/fooltip]
-#{<img src="https://gemnasium.com/intesys/fooltip.png" alt="Dependency Status" />}[https://gemnasium.com/intesys/fooltip]
-#{<img src="https://codeclimate.com/github/intesys/fooltip.png" alt="Code Climate" />}[https://codeclimate.com/github/intesys/fooltip]
-#{<img src="https://coveralls.io/repos/intesys/fooltip/badge.png?branch=master" alt="Coverage Status" />}[https://coveralls.io/r/intesys/fooltip]
-#{<img src="https://badge.fury.io/rb/fooltip.png" alt="Gem Version" />}[http://badge.fury.io/rb/fooltip]
+{<img src="https://travis-ci.org/intesys/fooltip.png?branch=master" alt="Build Status" />}[https://travis-ci.org/intesys/fooltip]
+{<img src="https://codeclimate.com/github/intesys/fooltip.png" alt="Code Climate" />}[https://codeclimate.com/github/intesys/fooltip]
+{<img src="https://coveralls.io/repos/intesys/fooltip/badge.png?branch=master" alt="Coverage Status" />}[https://coveralls.io/r/intesys/fooltip]
+{<img src="https://badge.fury.io/rb/fooltip.png" alt="Gem Version" />}[http://badge.fury.io/rb/fooltip]
 
 Fooltip - when a tooltip just isn't enough...
 
