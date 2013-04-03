@@ -1,2 +1,9 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
+$(document).ready(function() {
+
+  $('.fooltip-link-container').each(function() {
+    $(this).children('a').attr('data-content', $(this).children('.content').html());
+  });
+
+  $('.fooltip-link').popover();
+
+});

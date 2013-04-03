@@ -1,6 +1,7 @@
 FactoryGirl.define do
   factory :popup, class: 'Fooltip::Popup' do
-    name "MyString"
+    identifier "MyString"
+    title "MyString"
     content "MyText"
   end
 end

@@ -4,6 +4,7 @@ FactoryGirl.define do
     popup
     x 1
     y 1
-    popup_direction 1
+    placement 1
+    trigger 1
   end
 end

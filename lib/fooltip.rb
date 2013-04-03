@@ -2,6 +2,8 @@ require "globalize3"
 require "carrierwave"
 require "haml"
 require "jquery-rails"
+require "sass-rails"
+require "bootstrap-sass"
 require "fooltip/engine"
 require "fooltip/active_record"
 

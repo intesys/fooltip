@@ -18,17 +18,25 @@ class CreateFooltipTables < ActiveRecord::Migration
     end
 
     create_table :fooltip_popups do |t|
-      t.string :name
+      t.string :identifier
+      t.integer :min_height
+      t.integer :min_width
+      t.integer :max_height
+      t.integer :max_width
       t.timestamps
     end
-    Fooltip::Popup.create_translation_table!({ content: :text })
+    Fooltip::Popup.create_translation_table!({
+      title: :string,
+      content: :text
+    })
 
     create_table :fooltip_links do |t|
       t.references :container
       t.references :popup
+      t.integer :placement
+      t.integer :trigger
       t.integer :x
       t.integer :y
-      t.integer :popup_direction
       t.timestamps
     end
     add_index :fooltip_links, :container_id
