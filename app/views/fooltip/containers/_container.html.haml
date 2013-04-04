@@ -1,0 +1,15 @@
+.page-header
+  %h1= container.title
+
+.row-fluid
+  .fooltip-container
+    - container.links.each do |link|
+      %span{ id: "fooltip-link-#{link.id}", class: "fooltip-link-container" }
+        = link_to '', 'javascript:void(0);', class: "fooltip-link", data: { content: "", placement: link.placement_string, toggle: "popover", :"original-title" => link.popup.title || '', html: true, trigger: link.trigger_string }, style: "top: #{link.y}px; left: #{link.x}px;"
+        .content{ style: "display: none;" }
+          .fooltip-popup{ style: "min-width: #{link.popup.min_width}px; min-height: #{link.popup.min_height}px; max-width: #{link.popup.max_width}px; max-height: #{link.popup.max_height}px;" }
+            = raw link.popup.content
+    = image_tag container.image_url
+
+.row-fluid
+  %p.lead= container.description
