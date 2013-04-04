@@ -4,5 +4,6 @@ module Fooltip
     translates :title, :description, fallbacks_for_empty_translations: true
     attr_accessible :description, :title
     has_many :links, dependent: :destroy
+    has_many :associations, dependent: :destroy
   end
 end
