@@ -2,6 +2,8 @@ require 'spec_helper'
 
 module Fooltip
   describe Association do
+    it { should belong_to(:owner) }
+    it { should belong_to(:container) }
 
     it { should validate_presence_of :owner_id }
     it { should validate_presence_of :owner_type }

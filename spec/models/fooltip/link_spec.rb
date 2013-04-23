@@ -2,6 +2,9 @@ require 'spec_helper'
 
 module Fooltip
   describe Link do
+    it { should belong_to :container }
+    it { should belong_to :popup }
+
     it { should validate_presence_of :container }
     it { should validate_presence_of :popup }
     it { should validate_presence_of :x }
