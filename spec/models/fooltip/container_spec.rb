@@ -4,6 +4,7 @@ module Fooltip
   describe Container do
     it { should have_many(:links) }
     it { should have_many(:associations) }
+    it { should have_many(:popups).through(:links) }
 
     it "should destroy all associated links when destroyed" do
       c = FactoryGirl.create(:container)
