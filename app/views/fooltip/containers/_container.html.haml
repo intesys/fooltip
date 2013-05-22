@@ -1,18 +1,22 @@
-.page-header
-  %h1= container.title
+.fooltip
 
-.row-fluid
-  .fooltip-container
-    - container.links.each do |link|
-      %span{ id: "fooltip-link-#{link.id}", class: "fooltip-link-container" }
-        = link_to '', 'javascript:void(0);', class: "fooltip-link", id: "link-#{link.id}", data: { content: "", placement: link.placement_string, toggle: "popover", :"original-title" => "", html: true, trigger: link.trigger_string }, style: "top: #{link.y}px; left: #{link.x}px;"
-        .title{ style: "display: none;" }
-          %a{ href: "javascript:void(0)", class: "close" } &times;
-          = link.popup.title
-        .content{ style: "display: none;" }
-          .fooltip-popup{ data: { :"fooltip-link-id" => "link-#{link.id}" }, style: "min-width: #{link.popup.min_width}px; min-height: #{link.popup.min_height}px; max-width: #{link.popup.max_width}px; max-height: #{link.popup.max_height}px;" }
-            = raw link.popup.content
-    = image_tag container.image_url
+  .row-fluid
+    .fooltip-header
+      .page-header
+        %h3= container.title
 
-.row-fluid
-  %p.lead= raw container.description
+  .row-fluid
+    .fooltip-container
+      - container.links.each do |link|
+        %span{ id: "fooltip-link-#{link.id}", class: "fooltip-link-container" }
+          = link_to '', 'javascript:void(0);', class: "fooltip-link", id: "link-#{link.id}", data: { content: "", placement: link.placement_string, toggle: "popover", :"original-title" => "", html: true, trigger: link.trigger_string }, style: "top: #{link.y}px; left: #{link.x}px;"
+          .title{ style: "display: none;" }
+            %a{ href: "javascript:void(0)", class: "close" } &times;
+            = link.popup.title
+          .content{ style: "display: none;" }
+            .fooltip-popup{ data: { :"fooltip-link-id" => "link-#{link.id}" }, style: "min-width: #{link.popup.min_width}px; min-height: #{link.popup.min_height}px; max-width: #{link.popup.max_width}px; max-height: #{link.popup.max_height}px;" }
+              = raw link.popup.content
+      = image_tag container.image_url
+
+  .row-fluid
+    .fooltip-description= raw container.description

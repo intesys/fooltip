@@ -7,18 +7,27 @@
         float: right
         font-size: 23px
 
-.fooltip-container
-  width: auto
-  height: auto
-  position: relative
-  image
-    float: left
+.fooltip
+  margin: 1em 0 1em 0
+  padding: 1em
+  border: 1px solid #ccc
 
-.fooltip-link-container
-  position: absolute
-  .fooltip-link
-    display: block
+  .fooltip-container
+    width: auto
+    height: auto
+    position: relative
+    image
+      float: left
+
+  .fooltip-link-container
     position: absolute
-    height: 32px
-    width: 32px
-    background: url(image-path("fooltip/link.png")) no-repeat top left
+    .fooltip-link
+      display: block
+      position: absolute
+      height: 32px
+      width: 32px
+      background: url(image-path("fooltip/link.png")) no-repeat top left
+
+  .fooltip-description
+    text-align: center
+    font-style: italic
