@@ -9,7 +9,7 @@
     .fooltip-container
       - container.links.each do |link|
         %span{ id: "fooltip-link-#{link.id}", class: "fooltip-link-container" }
-          = link_to '', 'javascript:void(0);', class: "fooltip-link", id: "link-#{link.id}", data: { content: "", placement: link.placement_string, toggle: "popover", :"original-title" => "", html: true, trigger: link.trigger_string }, style: "top: #{link.y}px; left: #{link.x}px;"
+          = link_to '', 'javascript:void(0);', class: "fooltip-link", id: "link-#{link.id}", data: { content: "", placement: link.placement_string, toggle: "popover", :"original-title" => "", html: true, trigger: link.trigger_string, top: link.y, left: link.x  }
           .title{ style: "display: none;" }
             %a{ href: "javascript:void(0)", class: "close" } &times;
             = link.popup.title
