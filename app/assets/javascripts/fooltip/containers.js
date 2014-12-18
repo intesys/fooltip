@@ -48,6 +48,7 @@ $(document).ready(function() {
 
     $('.fooltip').resize(function() {
         $container = $(this).find('.fooltip-container');
+        $container.height($container.find('img').height());
         width = $container.width();
         height = $container.height();
         $container.find('.fooltip-link').each(function() {
