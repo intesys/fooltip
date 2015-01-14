@@ -36,11 +36,25 @@ $(document).ready(function() {
 
     $('.fooltip-link').popover();
 
+    $('.fooltip-link').live('click', function() {
+        $('.fooltip-link').not(this).popover('hide');
+    });
+
     $('.popover .close').live('click', function() {
         id = $(this).closest('.popover').find('.fooltip-popup').attr('data-fooltip-link-id');
+        $('.popover').hide();
         $('#' + id).popover('hide');
     });
 
+    $(document).mouseup(function (e) {
+        var container = $(".fooltip-link-container");
+        if (!container.is(e.target) // if the target of the click isn't the container...
+            && container.has(e.target).length === 0) // ... nor a descendant of the container
+        {
+            $('.popover').hide();
+            $('.fooltip-link').popover('hide');
+        }
+    });
 
     $(window).smartresize(function() {
         $('.fooltip').resize();
