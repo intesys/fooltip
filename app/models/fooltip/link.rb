@@ -3,7 +3,6 @@ module Fooltip
     PLACEMENT_MAPPINGS = { 1 => 'top', 2 => 'right', 3 => 'bottom', 4 => 'left' }
     TRIGGER_MAPPINGS = { 1 => 'click', 2 => 'hover', 3 => 'focus', 4 => 'manual' }
 
-    attr_accessible :container_id, :popup_id, :placement, :trigger, :x, :y
     belongs_to :container
     belongs_to :popup
 
